@@ -323,7 +323,7 @@ nav a:hover, nav a.active {
 
 /* Logo Image styling */
 .logo-img {
-  max-height: 365px;
+  max-height: 265px;
   width: auto;
   display: block;
 }
