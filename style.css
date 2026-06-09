@@ -80,8 +80,9 @@ header {
 
 /* Header Search Box */
 .header-search-container {
-  flex-grow: 0.35;
-  margin: 0 2rem;
+  flex: 1;
+  max-width: 450px;
+  margin: 0 1rem;
   position: relative;
 }
 
