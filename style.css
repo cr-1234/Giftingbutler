@@ -210,9 +210,49 @@ nav a:hover, nav a.active {
 
 /* Logo Image styling */
 .logo-img {
-  height: 50px;
+  height: 75px;
   width: auto;
   display: block;
+  filter: invert(1);
+}
+
+/* Secondary Categories Subheader Navigation */
+.category-nav-bar {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 2rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  position: sticky;
+  top: 117px; /* Sticky right beneath the sticky header */
+  z-index: 99;
+  box-shadow: var(--shadow-sm);
+}
+
+.category-nav-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.category-nav-bar .category-select-link {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.35rem 0.75rem;
+  transition: var(--transition-smooth);
+  border-radius: 50px;
+}
+
+.category-nav-bar .category-select-link:hover, 
+.category-nav-bar .category-select-link.active {
+  color: var(--accent-purple);
+  background: var(--accent-purple-light);
 }
 
 .btn {

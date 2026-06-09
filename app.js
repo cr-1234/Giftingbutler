@@ -378,9 +378,10 @@ detailWishlistBtn.addEventListener("click", () => {
 document.querySelectorAll(".category-select-link").forEach(link => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelectorAll(".category-select-link").forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
     const category = link.getAttribute("data-category");
+    document.querySelectorAll(".category-select-link").forEach(l => {
+      l.classList.toggle("active", l.getAttribute("data-category") === category);
+    });
     renderProducts(category, headerSearchInput.value.trim());
   });
 });
