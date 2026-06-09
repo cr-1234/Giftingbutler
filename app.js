@@ -466,6 +466,43 @@ window.addEventListener("load", () => {
   }, 2000);
 });
 
+// Mobile Nav Drawer logic
+const mobileMenuBtn   = document.getElementById("mobile-menu-btn");
+const mobileNavDrawer = document.getElementById("mobile-nav-drawer");
+const mobileNavOverlay= document.getElementById("mobile-nav-overlay");
+const mobileNavClose  = document.getElementById("mobile-nav-close");
+const mobileGiveawayBtn = document.getElementById("mobile-giveaway-btn");
+
+function openMobileNav() {
+  mobileNavDrawer.classList.add("open");
+  mobileNavOverlay.classList.add("open");
+  document.body.style.overflow = "hidden";
+  if (window.lucide) lucide.createIcons();
+}
+
+function closeMobileNav() {
+  mobileNavDrawer.classList.remove("open");
+  mobileNavOverlay.classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+mobileMenuBtn.addEventListener("click", openMobileNav);
+mobileNavClose.addEventListener("click", closeMobileNav);
+mobileNavOverlay.addEventListener("click", closeMobileNav);
+
+// Mobile drawer links close the drawer when tapped
+document.querySelectorAll(".mobile-nav-link").forEach(link => {
+  link.addEventListener("click", () => {
+    closeMobileNav();
+  });
+});
+
+// Mobile giveaway button
+mobileGiveawayBtn.addEventListener("click", () => {
+  closeMobileNav();
+  showGiveawayModal();
+});
+
 // Family Registry & Wishlists logic
 function renderFamilyMembers() {
   familyMemberList.innerHTML = "";

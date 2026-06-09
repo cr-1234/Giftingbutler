@@ -58,7 +58,43 @@
         <i data-lucide="gift"></i> Weekly Giveaway
       </button>
     </nav>
+
+    <!-- Mobile Hamburger -->
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+      <i data-lucide="menu"></i>
+    </button>
   </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span style="font-weight:800; font-size:1.1rem;">GiftingButler</span>
+      <button class="mobile-nav-close" id="mobile-nav-close"><i data-lucide="x"></i></button>
+    </div>
+    <div class="mobile-nav-body">
+      <div class="mobile-nav-section-title">Simchas</div>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="bris">Bris Gifts</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="bar-mitzvah">Bar Mitzvah</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="bat-mitzvah">Bat Mitzvah</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="upsherin">Upsherin</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="lchaim-vort">L'chaim/Vort</a>
+      <div class="mobile-nav-section-title">Other</div>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="him">For Him</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="her">For Her</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="housewarming">Housewarming</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="grandchildren">Gifts for Grandchildren</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="children-u3">Children (0-3 Years)</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="children-4-8">Children (4-8 Years)</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="children-9-12">Children (9-12 Years)</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="#wishlist-section" class="mobile-nav-link">My Wishlist</a>
+      <a href="#reminder-section" class="mobile-nav-link">Reminders</a>
+      <button class="btn btn-primary" id="mobile-giveaway-btn" style="width:100%; margin-top:1rem;">
+        <i data-lucide="gift"></i> Weekly Giveaway
+      </button>
+    </div>
+  </div>
 
   <!-- Secondary Categories Bar (Subheader Navigation) -->
   <div class="category-nav-bar" id="categoryNav">
