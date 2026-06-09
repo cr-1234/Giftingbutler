@@ -6,7 +6,7 @@
   <title>GiftingButler | Premium Personal Gifting Concierge</title>
   <meta name="description" content="GiftingButler - Your premium personal gifting concierge. Plan recurring events, get notified so you never miss an occasion, sync family wishlists.">
   <!-- Added cache busters to bypass browser styles cache -->
-  <link rel="stylesheet" href="style.css?v=1.0.4">
+  <link rel="stylesheet" href="style.css?v=1.1.0">
   <!-- Lucide Icons via CDN for clean aesthetic -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -14,7 +14,7 @@
 
   <!-- Main Header -->
   <header>
-    <a href="#" class="logo" id="main-logo">
+    <a href="index.html" class="logo" id="main-logo">
       <img src="logo.png" alt="GiftingButler Logo" class="logo-img">
     </a>
 
@@ -25,8 +25,6 @@
     </div>
 
     <nav>
-      <a href="#feed" class="category-select-link active" data-category="all">All Gifts</a>
-      
       <div class="nav-dropdown">
         <button class="nav-dropdown-btn">
           Explore Gifts <i data-lucide="chevron-down" style="width:14px; height:14px; margin-left:2px;"></i>
@@ -180,7 +178,33 @@
 
   <!-- Footer Section -->
   <footer>
-    <p>&copy; 2026 GiftingButler. Handcrafted with precision. All rights reserved.</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom:1rem; display:inline-block;">
+          <img src="logo.png" alt="GiftingButler" class="logo-img" style="height:50px; filter:invert(1);">
+        </a>
+        <p style="font-size:0.85rem; color:var(--text-muted); max-width:280px; text-align:left;">
+          GiftingButler is your personal concierge for fine curations, recurring alerts, and custom registries.
+        </p>
+      </div>
+      <div class="footer-links-col">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Contact Support</a>
+      </div>
+      <div class="footer-links-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-disclosure" style="margin-top:2rem; border-top:1px solid var(--border-color); padding-top:1.5rem; font-size:0.75rem; color:var(--text-muted); line-height:1.4; text-align:left;">
+      <p>Disclosure: GiftingButler is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. Some purchases made through our recommendation links may earn us a small commission at no additional cost to you.</p>
+    </div>
+    <div class="footer-bottom" style="margin-top:1.5rem; font-size:0.8rem; color:var(--text-muted);">
+      <p>&copy; 2026 GiftingButler. Handcrafted with precision. All rights reserved.</p>
+    </div>
   </footer>
 
   <!-- Giveaway Modal (Popup) -->
@@ -195,10 +219,6 @@
         <p style="color:var(--text-secondary); margin-bottom:1.5rem; font-size:0.95rem;">
           GiftingButler is made possible by our premium sponsors. Support our partners at Mishpacha and Ami Magazine for high-quality weekly reading.
         </p>
-        <div style="background:var(--accent-purple-light); padding:1rem; border-radius:var(--radius-sm); border:1px solid var(--accent-purple); margin-bottom:1.5rem; text-align:left;">
-          <h4 style="color:var(--accent-purple); margin-bottom:0.25rem;">📢 Mishpacha Magazine Offer</h4>
-          <p style="font-size:0.8rem; color:var(--text-primary);">Receive a 15% discount code on new annual subscription options right inside your GiftingButler entries receipt email!</p>
-        </div>
         <button class="btn btn-primary" id="btn-proceed-giveaway" style="width:100%;">Proceed to Weekly Giveaway</button>
       </div>
 
@@ -259,7 +279,7 @@
   </div>
 
   <!-- Added cache buster on javascript to bypass browser cache -->
-  <script src="app.js?v=1.0.4"></script>
+  <script src="app.js?v=1.1.0"></script>
   <script>
     lucide.createIcons();
   </script>
