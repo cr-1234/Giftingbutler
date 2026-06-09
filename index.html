@@ -3,39 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gifty - Curated Gifting for Gen Z | Uncommon & Affiliate Wishlists</title>
-  <meta name="description" content="Find the most unique, aesthetic, and uncommon gifts for your friends and family. Track wishlists, set recurring event reminders, get AI advice, and win giveaways!">
-  <link rel="stylesheet" href="style.css">
-  <!-- Lucide Icons via CDN for modern clean aesthetic -->
+  <title>GiftingButler | Premium Personal Gifting Concierge</title>
+  <meta name="description" content="GiftingButler - Your premium personal gifting concierge. Plan recurring events, get notified so you never miss an occasion, sync family wishlists.">
+  <!-- Added cache busters to bypass browser styles cache -->
+  <link rel="stylesheet" href="style.css?v=1.0.4">
+  <!-- Lucide Icons via CDN for clean aesthetic -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-  <!-- Header Navigation -->
+  <!-- Main Header -->
   <header>
     <a href="#" class="logo" id="main-logo">
-      <i data-lucide="sparkles"></i>
-      gifty<span class="serif-italic" style="font-size:1.1rem; margin-left:-0.2rem;">.</span>
+      <img src="logo.png" alt="GiftingButler Logo" class="logo-img">
     </a>
+
+    <!-- Header Search Box -->
+    <div class="header-search-container">
+      <i data-lucide="search" class="header-search-icon" style="width:16px; height:16px;"></i>
+      <input type="text" id="header-search" class="header-search-input" placeholder="Search gifts, events, or wishlists...">
+    </div>
+
     <nav>
-      <a href="#feed" class="active">Explore Gifts</a>
-      <a href="#wishlist-section">Family Wishlists</a>
+      <a href="#feed" class="category-select-link active" data-category="all">All Gifts</a>
+      
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn">
+          Explore Gifts <i data-lucide="chevron-down" style="width:14px; height:14px; margin-left:2px;"></i>
+        </button>
+        <div class="nav-dropdown-content">
+          <div class="dropdown-group">
+            <span class="dropdown-group-title">Simchas</span>
+            <a href="#feed" class="category-select-link" data-category="bris">Bris Gifts</a>
+            <a href="#feed" class="category-select-link" data-category="bar-mitzvah">Bar Mitzvah</a>
+            <a href="#feed" class="category-select-link" data-category="bat-mitzvah">Bat Mitzvah</a>
+            <a href="#feed" class="category-select-link" data-category="upsherin">Upsherin</a>
+            <a href="#feed" class="category-select-link" data-category="lchaim-vort">L'chaim/Vort</a>
+            <a href="#feed" class="category-select-link" data-category="shvielle-chaim-vort">Shvielle Chaim/Vort</a>
+          </div>
+          <div class="dropdown-group">
+            <span class="dropdown-group-title">Recipients</span>
+            <a href="#feed" class="category-select-link" data-category="him">For Him</a>
+            <a href="#feed" class="category-select-link" data-category="her">For Her</a>
+            <a href="#feed" class="category-select-link" data-category="housewarming">Housewarming</a>
+            <a href="#feed" class="category-select-link" data-category="grandchildren">Gifts for Grandchildren</a>
+            <a href="#feed" class="category-select-link" data-category="children-u3">Children (0-3 Years)</a>
+            <a href="#feed" class="category-select-link" data-category="children-4-8">Children (4-8 Years)</a>
+            <a href="#feed" class="category-select-link" data-category="children-9-12">Children (9-12 Years)</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#wishlist-section">My Wishlist</a>
       <a href="#reminder-section">Reminders</a>
-      <button class="btn btn-primary" id="trigger-giveaway-btn">
-        <i data-lucide="gift"></i> Giveaway
+      
+      <button class="btn btn-primary" id="trigger-giveaway-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+        <i data-lucide="gift"></i> Weekly Giveaway
       </button>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="badge">🔥 Gen Z Approved Gifting</div>
-    <h1>Find the <span class="serif-italic">perfect</span> gift<br>for anyone, anytime.</h1>
-    <p>We curate the most aesthetic, uncommon products from your favorite creators and stores. Join our family circle wishlist to share and get exactly what you want.</p>
-    <div style="display:flex; justify-content:center; gap:1rem;">
-      <a href="#feed" class="btn btn-primary">Start Browsing</a>
-      <a href="#chatbot" class="btn btn-secondary" id="hero-chat-btn"><i data-lucide="message-square"></i> Ask AI Assistant</a>
-    </div>
+    <h1>Find the perfect gift for anyone, anytime.</h1>
+    <p>Your premium personal gifting concierge. Plan recurring events and get notified so you never miss an occasion, sync family wishlists.</p>
   </section>
 
   <!-- Main Container Grid -->
@@ -44,35 +75,20 @@
     <!-- Left Column: Gift Feed -->
     <section id="feed">
       <div class="feed-header">
-        <h2 style="font-size: 1.75rem;">Trending Curations</h2>
-        <div class="categories-scroll">
-          <button class="category-tag active" data-category="all">All</button>
-          <button class="category-tag" data-category="tech">Aesthetic Tech</button>
-          <button class="category-tag" data-category="decor">Room Decor</button>
-          <button class="category-tag" data-category="lifestyle">Lifestyle</button>
-          <button class="category-tag" data-category="magazines">Reading/Sub</button>
-        </div>
+        <h2 style="font-size: 1.6rem;" id="feed-title">Trending Curations</h2>
       </div>
 
       <div class="products-grid" id="products-grid">
-        <!-- Products will be dynamically generated by JS -->
+        <!-- Products dynamically generated -->
       </div>
     </section>
 
     <!-- Right Column: Sidebar Widgets -->
     <aside class="sidebar">
-      
-      <!-- Premium Ad Placement 1 -->
-      <div class="ad-slot">
-        <span class="ad-badge">SPONSORED</span>
-        <h3 class="ad-title">Upgrade Your Style</h3>
-        <p class="ad-desc">Get 20% off sustainable everyday bags designed for Gen Z. Use code <strong>GIFTY20</strong>.</p>
-        <a href="https://uncommongoods.com" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%;">Shop Now</a>
-      </div>
 
       <!-- Family Wishlist Widget -->
       <div class="widget" id="wishlist-section">
-        <h3 class="widget-title"><i data-lucide="users" style="color:var(--accent-purple);"></i> Family Registry</h3>
+        <h3 class="widget-title"><i data-lucide="users" style="color:var(--accent-purple);"></i> My Wishlist & Family Registry</h3>
         <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">Select a family member to see their wishlist, or share the lists with others.</p>
         
         <div class="family-member-list" id="family-member-list">
@@ -97,7 +113,15 @@
           </div>
 
           <form id="add-wishlist-item-form" style="margin-top:1rem; border-top: 1px solid var(--border-color); padding-top:1rem;">
-            <p style="font-size:0.75rem; color:var(--text-secondary); margin-bottom:0.5rem;">Add item link from any site/affiliate:</p>
+            <p style="font-size:0.75rem; color:var(--text-secondary); margin-bottom:0.6rem;">Add items from the site:</p>
+            
+            <!-- Quick affiliate links portal -->
+            <div style="margin-bottom: 0.8rem;">
+              <a href="https://www.amazon.com/?tag=giftingbutler-20" target="_blank" class="amazon-portal-badge">
+                <i data-lucide="external-link" style="width:12px; height:12px;"></i> Shop Amazon
+              </a>
+            </div>
+
             <div class="form-group">
               <input type="text" id="wishlist-title-input" class="form-input" placeholder="Item Name (e.g. Vintage Camera)" required style="margin-bottom:0.5rem;">
               <input type="url" id="wishlist-url-input" class="form-input" placeholder="Paste product link (URL)" required>
@@ -109,8 +133,8 @@
 
       <!-- Recurring Gifting Reminders Widget -->
       <div class="widget" id="reminder-section">
-        <h3 class="widget-title"><i data-lucide="calendar" style="color:var(--accent-peach);"></i> Recurring Gift Reminders</h3>
-        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">Get notified right before important recurring dates so you're never late.</p>
+        <h3 class="widget-title"><i data-lucide="calendar" style="color:var(--accent-peach);"></i> Gifting Reminders</h3>
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">Add upcoming gifting events that recur annually. We will calculate alerts based on dates.</p>
 
         <form id="reminder-form">
           <div class="form-group">
@@ -118,11 +142,11 @@
             <input type="text" id="reminder-event" class="form-input" placeholder="e.g. Mom's Birthday" required>
           </div>
           <div class="form-group">
-            <label for="reminder-date">Date</label>
+            <label for="reminder-date">Calendar Date</label>
             <input type="date" id="reminder-date" class="form-input" required>
           </div>
           <div class="form-group">
-            <label for="reminder-time">Remind Me</label>
+            <label for="reminder-time">Alert Lead-Time</label>
             <select id="reminder-time" class="form-input">
               <option value="1_month">1 Month Before</option>
               <option value="2_weeks">2 Weeks Before</option>
@@ -138,71 +162,92 @@
         </div>
       </div>
 
-      <!-- Premium Ad Placement 2 -->
-      <div class="ad-slot" style="background: linear-gradient(135deg, var(--accent-mint-light), #ecfdf5); border-color: var(--accent-mint);">
-        <span class="ad-badge" style="background: rgba(16, 185, 129, 0.2); color: var(--accent-mint);">TRENDING</span>
-        <h3 class="ad-title" style="color: #065f46;">Ami & Mishpacha</h3>
-        <p class="ad-desc" style="color: #047857;">Give a gift of print stories and culture. Select Ami or Mishpacha print subscriptions directly from our catalog.</p>
-      </div>
-
     </aside>
   </main>
 
   <!-- Footer Section -->
   <footer>
-    <p>&copy; 2026 Gifty Inc. Handcrafted with Sparkles. All affiliate links pay out small rewards to support curations.</p>
+    <p>&copy; 2026 GiftingButler. Handcrafted with precision. All rights reserved.</p>
   </footer>
 
   <!-- Giveaway Modal (Popup) -->
   <div class="modal-overlay" id="giveaway-modal">
     <div class="modal-content">
       <button class="modal-close" id="close-modal-btn">&times;</button>
-      <i data-lucide="award" style="font-size: 3rem; color: var(--accent-purple); margin-bottom: 1rem; width:64px; height:64px;"></i>
-      <h2 style="margin-bottom:0.75rem;">Enter the Epic Giveaway!</h2>
-      <p style="color:var(--text-secondary); margin-bottom:1.5rem; font-size:0.95rem;">Join 50,000+ others and subscribe to get premium curated Gen Z gift drop alerts weekly. Enter your email for a chance to win a $500 Uncommon Goods Gift Card!</p>
-
-      <!-- Required Sponsor Advertisement in the popup before entering email -->
-      <div class="modal-sponsor-ad">
-        <h4>📢 Sponsored by Mishpacha Magazine</h4>
-        <p>Subscribe to Mishpacha for premium weekly reading. Get a special Gifty reader discount inside your confirmation email!</p>
-      </div>
-
-      <form id="giveaway-form">
-        <div class="form-group">
-          <input type="email" id="giveaway-email" class="form-input" placeholder="yourname@gmail.com" required style="text-align:center;">
+      
+      <!-- STEP 1: SPONSOR ADVERTISEMENT (Shows first) -->
+      <div id="giveaway-step-ad" class="giveaway-step active">
+        <i data-lucide="megaphone" style="font-size: 3rem; color: var(--accent-peach); margin-bottom: 1.25rem; width:64px; height:64px;"></i>
+        <h2 style="margin-bottom:0.75rem;">Partner Spotlight</h2>
+        <p style="color:var(--text-secondary); margin-bottom:1.5rem; font-size:0.95rem;">
+          GiftingButler is made possible by our premium sponsors. Support our partners at Mishpacha and Ami Magazine for high-quality weekly reading.
+        </p>
+        <div style="background:var(--accent-purple-light); padding:1rem; border-radius:var(--radius-sm); border:1px solid var(--accent-purple); margin-bottom:1.5rem; text-align:left;">
+          <h4 style="color:var(--accent-purple); margin-bottom:0.25rem;">📢 Mishpacha Magazine Offer</h4>
+          <p style="font-size:0.8rem; color:var(--text-primary);">Receive a 15% discount code on new annual subscription options right inside your GiftingButler entries receipt email!</p>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;"><i data-lucide="mail"></i> Enter & Claim Free Entry</button>
-      </form>
+        <button class="btn btn-primary" id="btn-proceed-giveaway" style="width:100%;">Proceed to Weekly Giveaway</button>
+      </div>
+
+      <!-- STEP 2: WEEKLY GIVEAWAY FORM (Shows after clicking proceed) -->
+      <div id="giveaway-step-form" class="giveaway-step">
+        <i data-lucide="gift" style="font-size: 3rem; color: var(--accent-purple); margin-bottom: 1rem; width:64px; height:64px;"></i>
+        <h2 style="margin-bottom:0.5rem;">Weekly Giveaway</h2>
+        <p style="color:var(--text-secondary); margin-bottom:1rem; font-size:0.9rem;">
+          Enter weekly for a chance to win an Amazon Gift Card. Prize pool scales with entries.
+        </p>
+
+        <!-- Prize dynamic tier tracker card -->
+        <div style="background: var(--bg-tertiary); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.25rem; width: 100%;">
+          <div style="display:flex; justify-content:space-between; font-weight:800; font-size:0.9rem; margin-bottom:0.5rem;">
+            <span>Entries: <span id="entryCount" style="color:var(--accent-purple);">0</span></span>
+            <span>Current Prize Pool: <span id="prizeAmount" style="color:var(--accent-mint); font-size:1.1rem;">$5</span></span>
+          </div>
+          
+          <div class="prize-tiers-container">
+            <div class="prize-tier active" id="tier-5">$5 (Base)</div>
+            <div class="prize-tier" id="tier-10">$10 (100)</div>
+            <div class="prize-tier" id="tier-25">$25 (250)</div>
+            <div class="prize-tier" id="tier-50">$50 (1k)</div>
+            <div class="prize-tier" id="tier-75">$75 (5k)</div>
+            <div class="prize-tier" id="tier-100">$100 (10k)</div>
+          </div>
+        </div>
+
+        <form id="giveaway-form" style="width: 100%;">
+          <div class="form-group">
+            <input type="email" id="giveaway-email" class="form-input" placeholder="Enter your email to enter" required style="text-align:center;">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;"><i data-lucide="mail"></i> Join Giveaway</button>
+        </form>
+      </div>
+
     </div>
   </div>
 
-  <!-- AI Chatbot Box -->
-  <button class="chatbot-trigger" id="chatbot-trigger-btn">
-    <i data-lucide="message-square"></i>
-  </button>
-
-  <div class="chatbot-window" id="chatbot-window">
-    <div class="chatbot-header">
-      <div class="chatbot-header-title">
-        <h3>Gifty AI Advisor ✨</h3>
-        <p>Ask me for gift ideas!</p>
+  <!-- Product Details Modal -->
+  <div class="modal-overlay" id="detail-modal">
+    <div class="modal-content" style="max-width: 700px;">
+      <button class="modal-close" id="close-detail-modal-btn">&times;</button>
+      <div class="detail-modal-layout">
+        <img id="detail-img" src="" alt="Product" class="detail-modal-img">
+        <div class="detail-modal-info">
+          <span id="detail-brand" class="product-brand" style="margin-bottom: 0.5rem;">Brand</span>
+          <h2 id="detail-title" style="margin-bottom: 0.75rem; font-size: 1.5rem;">Product Title</h2>
+          <p id="detail-desc" style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Product Description...</p>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto; gap:1rem;">
+            <span id="detail-price" class="product-price" style="font-size: 1.6rem;">$0.00</span>
+            <a id="detail-affiliate-link" href="" target="_blank" class="btn btn-primary"><i data-lucide="external-link"></i> Buy Gift</a>
+          </div>
+          <button id="detail-wishlist-btn" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;"><i data-lucide="heart"></i> Add to your wishlist</button>
+        </div>
       </div>
-      <button class="chatbot-close" id="chatbot-close-btn">&times;</button>
     </div>
-    <div class="chatbot-messages" id="chatbot-messages">
-      <div class="chat-bubble chat-bubble-bot">
-        Hey there! I am your AI Gift Matchmaker. Who are you shopping for, and what are their vibes/interests? Let me find you something unique!
-      </div>
-    </div>
-    <form class="chatbot-input-area" id="chatbot-input-form">
-      <input type="text" id="chatbot-input" class="form-input" placeholder="Type a prompt (e.g. gift for gamer sister)..." required>
-      <button type="submit" class="btn btn-primary" style="padding:0.75rem;"><i data-lucide="send"></i></button>
-    </form>
   </div>
 
-  <script src="app.js"></script>
+  <!-- Added cache buster on javascript to bypass browser cache -->
+  <script src="app.js?v=1.0.4"></script>
   <script>
-    // Initialize Lucide Icons
     lucide.createIcons();
   </script>
 </body>

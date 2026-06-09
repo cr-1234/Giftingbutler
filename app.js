@@ -1,84 +1,136 @@
-// Mock Gift Products Data (Uncommon Goods style with Gen Z appeal)
+// Mock Gift Products Data with extensive category metadata (Uncommon Goods style, premium selection)
 const products = [
   {
     id: 1,
     title: "Aesthetic Wave Mirror",
     brand: "LumiDeco",
     price: 38.00,
-    category: "decor",
+    categories: ["decor", "her", "bat-mitzvah", "housewarming"],
     imageUrl: "https://images.unsplash.com/photo-1618220179428-22790b461013?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "An elegant, retro-inspired wavy vanity mirror that adds instant visual texture and warmth to any modern room. Featured extensively on TikTok aesthetic curations.",
     affiliateUrl: "https://www.uncommongoods.com/product/wavy-neon-mirror",
     badge: "Trending"
   },
   {
     id: 2,
-    title: "Ami Magazine Print Subscription",
-    brand: "Ami Magazine Weekly",
-    price: 180.00,
-    category: "magazines",
-    imageUrl: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    affiliateUrl: "https://www.amimagazine.org/",
-    badge: "Weekly Print"
+    title: "Soft Cotton Swaddle & Teether Set",
+    brand: "LoomyBaby",
+    price: 34.99,
+    categories: ["baby", "bris", "children-u3", "grandchildren"],
+    imageUrl: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "Premium organic muslin cotton swaddles paired with a natural maple wood teething ring. Perfect baby registry starter kit.",
+    affiliateUrl: "https://www.amazon.com/dp/B08V5NPD8X?tag=giftingbutler-20",
+    badge: "Organic"
   },
   {
     id: 3,
-    title: "Mishpacha Magazine Subscription",
-    brand: "Mishpacha Weekly",
-    price: 195.00,
-    category: "magazines",
-    imageUrl: "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    affiliateUrl: "https://mishpacha.com/",
-    badge: "Holiday Special"
+    title: "Leather Embossed Kiddush Cup Set",
+    brand: "JudaicArt",
+    price: 120.00,
+    categories: ["bar-mitzvah", "lchaim-vort", "wedding"],
+    imageUrl: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "A gorgeous modern silver kiddush cup with a handcrafted custom leather wrap sleeve. Excellent milestone souvenir.",
+    affiliateUrl: "https://www.amazon.com/?tag=giftingbutler-20",
+    badge: "Premium Art"
   },
   {
     id: 4,
+    title: "Upsherin Scissors & Honey Cake Box Set",
+    brand: "TraditionBox",
+    price: 45.00,
+    categories: ["upsherin", "children-u3", "grandchildren"],
+    imageUrl: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "Traditional honey biscuits and personalized keepsakes for a toddler's Upsherin hair cutting ceremony.",
+    affiliateUrl: "https://www.amazon.com/?tag=giftingbutler-20",
+    badge: "Specialty"
+  },
+  {
+    id: 5,
+    title: "Modern Glass Mezuzah Case",
+    brand: "StudioGlass",
+    price: 55.00,
+    categories: ["housewarming", "wedding", "lchaim-vort"],
+    imageUrl: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "Beautiful clean lines and color infusions characterize this Mezuzah casing. Hand-blown craftsmanship.",
+    affiliateUrl: "https://www.amazon.com/?tag=giftingbutler-20",
+    badge: "New Home"
+  },
+  {
+    id: 6,
     title: "Retro Mechanical Keyboard",
     brand: "ClickyVibe",
     price: 89.00,
-    category: "tech",
+    categories: ["tech", "him", "bar-mitzvah"],
     imageUrl: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "A gorgeous retro typewriter-style keyboard with satisfying tactile switches, round keys, and custom ambient backlights.",
     affiliateUrl: "https://www.uncommongoods.com/product/retro-typewriter-keyboard",
     badge: "Bestseller"
   },
   {
-    id: 5,
-    title: "Mushroom Bedside Lamp",
-    brand: "Shroomy",
-    price: 24.50,
-    category: "decor",
-    imageUrl: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    affiliateUrl: "https://www.uncommongoods.com/product/mushroom-glass-lamp",
-    badge: "TikTok Fav"
-  },
-  {
-    id: 6,
-    title: "Minimalist Instax Camera Organizer",
-    brand: "FujiKeep",
-    price: 19.99,
-    category: "lifestyle",
-    imageUrl: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    affiliateUrl: "https://www.uncommongoods.com/product/camera-stand",
-    badge: "Organized"
-  },
-  {
     id: 7,
-    title: "Scented Cereal Bowl Candle",
-    brand: "SmellGood",
-    price: 18.00,
-    category: "lifestyle",
-    imageUrl: "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    affiliateUrl: "https://www.uncommongoods.com/product/cereal-bowl-candle",
-    badge: "Uncommon Only"
+    title: "Personalized Silver Challah Board",
+    brand: "SterlingCrown",
+    price: 210.00,
+    categories: ["wedding", "housewarming"],
+    imageUrl: "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "A heavy marble chalboard featuring elegant sterling silver borders. A traditional and centerpiece gift for weddings.",
+    affiliateUrl: "https://www.amazon.com/?tag=giftingbutler-20",
+    badge: "Handcrafted"
   },
   {
     id: 8,
     title: "Ambient Sunset Projection Lamp",
     brand: "SolGlow",
     price: 15.00,
-    category: "tech",
+    categories: ["tech", "decor", "her", "children-9-12"],
     imageUrl: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "Bathe your room in beautiful, warm golden sunset hues. Rotate 180 degrees to projects colors across walls, ceiling, and desk layouts.",
     affiliateUrl: "https://www.uncommongoods.com/product/sunset-lamp",
-    badge: "Cozy vibes"
+    badge: "Cozy Vibes"
+  },
+  {
+    id: 9,
+    title: "Interactive Wooden Play Gym",
+    brand: "HabaKids",
+    price: 64.95,
+    categories: ["children-u3", "grandchildren"],
+    imageUrl: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "A beautifully designed organic birch wood activity play gym with sensory toys to assist infant sensory exploration.",
+    affiliateUrl: "https://www.amazon.com/?tag=giftingbutler-20",
+    badge: "Pure Wood"
+  },
+  {
+    id: 10,
+    title: "Stem Coding Robot Toy",
+    brand: "RoboEdu",
+    price: 79.99,
+    categories: ["children-4-8", "grandchildren", "him", "her"],
+    imageUrl: "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "Introduce kids to basic computer coding logic with this charming programmable robot toy containing path cards.",
+    affiliateUrl: "https://www.amazon.com/?tag=giftingbutler-20",
+    badge: "STEM"
+  },
+  {
+    id: 11,
+    title: "Creative Sketching Tablet Set",
+    brand: "ArtJoy",
+    price: 45.00,
+    categories: ["children-9-12", "grandchildren", "her"],
+    imageUrl: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "A high-precision drawing kit containing a sleek design tablet, styling pen, and drawing lessons handbook.",
+    affiliateUrl: "https://www.amazon.com/?tag=giftingbutler-20",
+    badge: "Creative"
+  },
+  {
+    id: 12,
+    title: "Sterling Silver Havdalah Set",
+    brand: "JudaicArt",
+    price: 180.00,
+    categories: ["shvielle-chaim-vort", "wedding"],
+    imageUrl: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    description: "A beautifully sculpted sterling silver Havdalah set including spice holder, candle holder, and tray.",
+    affiliateUrl: "https://www.amazon.com/?tag=giftingbutler-20",
+    badge: "Traditional"
   }
 ];
 
@@ -93,27 +145,90 @@ const storage = {
   }
 };
 
-// Application State
-let familyMembers = storage.get("gifty_family_members", [
+// Weekly Key Generator helper for dynamic entry counting
+function getWeeklyKey(prefix) {
+  const d = new Date();
+  const year = d.getFullYear();
+  const start = new Date(year, 0, 1);
+  const diff = d - start;
+  const oneDay = 1000 * 60 * 60 * 24;
+  const weekNum = Math.ceil((diff / oneDay + start.getDay() + 1) / 7);
+  return `${prefix}_${year}_w${weekNum}`;
+}
+
+// User Giveaway Helper Logic
+function getGiveawayEntries() { 
+  return storage.get(getWeeklyKey('giveawayEntries'), []); 
+}
+
+function setGiveawayEntries(entries) { 
+  storage.set(getWeeklyKey('giveawayEntries'), entries); 
+}
+
+function getMyEmail() { 
+  return localStorage.getItem(getWeeklyKey('giveawayMyEmail')); 
+}
+
+function setMyEmail(email) { 
+  localStorage.setItem(getWeeklyKey('giveawayMyEmail'), email); 
+}
+
+// Prize amount scales with entries
+function calculatePrize(count) {
+  if (count >= 10000) return '$100';
+  if (count >= 5000)  return '$75';
+  if (count >= 1000)  return '$50';
+  if (count >= 250)   return '$25';
+  if (count >= 100)   return '$10';
+  return '$5';
+}
+
+// Update giveaway entry count and prize display
+function updateEntryCount() {
+  const entries = getGiveawayEntries();
+  const countEl = document.getElementById('entryCount');
+  const prizeEl = document.getElementById('prizeAmount');
+  const tiers   = document.querySelectorAll('.prize-tier');
+  const prize   = calculatePrize(entries.length);
+  
+  if (countEl) countEl.textContent = entries.length;
+  if (prizeEl) prizeEl.textContent = prize;
+  
+  if (tiers.length) {
+    const map = { '$5': 0, '$10': 1, '$25': 2, '$50': 3, '$75': 4, '$100': 5 };
+    const targetIdx = map[prize] !== undefined ? map[prize] : 0;
+    tiers.forEach((t, i) => {
+      t.classList.toggle('active', i === targetIdx);
+    });
+  }
+}
+
+// Add Mock Seed Entries if storage is empty
+if (getGiveawayEntries().length === 0) {
+  const initialSeeds = Array.from({length: 120}, (_, i) => `seeduser${i}@gmail.com`);
+  setGiveawayEntries(initialSeeds);
+}
+
+// Application Registry State
+let familyMembers = storage.get("gifting_butler_family", [
   { id: 1, name: "Jacob", wishlist: [
-    { title: "Retro Mechanical Keyboard", url: "https://www.uncommongoods.com/product/retro-typewriter-keyboard" },
-    { title: "Scented Cereal Bowl Candle", url: "https://www.uncommongoods.com/product/cereal-bowl-candle" }
+    { title: "Retro Mechanical Keyboard", url: "https://www.uncommongoods.com/product/retro-typewriter-keyboard" }
   ]},
   { id: 2, name: "Sarah", wishlist: [
     { title: "Aesthetic Wave Mirror", url: "https://www.uncommongoods.com/product/wavy-neon-mirror" }
   ]}
 ]);
 
-let reminders = storage.get("gifty_reminders", [
+let reminders = storage.get("gifting_butler_reminders", [
   { id: 1, event: "Sarah's Birthday", date: "2026-07-15", timeOption: "2_weeks" },
   { id: 2, event: "Jacob's Graduation", date: "2026-06-25", timeOption: "1_week" }
 ]);
 
 let activeMemberId = familyMembers.length > 0 ? familyMembers[0].id : null;
+let currentProductViewing = null;
 
 // DOM Elements
 const productsGrid = document.getElementById("products-grid");
-const categoryTags = document.querySelectorAll(".category-tag");
 const giveawayModal = document.getElementById("giveaway-modal");
 const triggerGiveawayBtn = document.getElementById("trigger-giveaway-btn");
 const closeModalBtn = document.getElementById("close-modal-btn");
@@ -130,20 +245,61 @@ const wishlistUrlInput = document.getElementById("wishlist-url-input");
 const shareWishlistBtn = document.getElementById("share-wishlist-btn");
 const reminderForm = document.getElementById("reminder-form");
 const reminderList = document.getElementById("reminder-list");
-const chatbotTriggerBtn = document.getElementById("chatbot-trigger-btn");
-const chatbotWindow = document.getElementById("chatbot-window");
-const chatbotCloseBtn = document.getElementById("chatbot-close-btn");
-const chatbotMessages = document.getElementById("chatbot-messages");
-const chatbotInputForm = document.getElementById("chatbot-input-form");
-const chatbotInput = document.getElementById("chatbot-input");
-const heroChatBtn = document.getElementById("hero-chat-btn");
+
+// Details Modal
+const detailModal = document.getElementById("detail-modal");
+const closeDetailModalBtn = document.getElementById("close-detail-modal-btn");
+const detailImg = document.getElementById("detail-img");
+const detailBrand = document.getElementById("detail-brand");
+const detailTitle = document.getElementById("detail-title");
+const detailDesc = document.getElementById("detail-desc");
+const detailPrice = document.getElementById("detail-price");
+const detailAffiliateLink = document.getElementById("detail-affiliate-link");
+const detailWishlistBtn = document.getElementById("detail-wishlist-btn");
+
+// Header Search
+const headerSearchInput = document.getElementById("header-search");
+
+// Giveaway Popup Step Transition Elements
+const stepAd = document.getElementById("giveaway-step-ad");
+const stepForm = document.getElementById("giveaway-step-form");
+const btnProceedGiveaway = document.getElementById("btn-proceed-giveaway");
 
 // Render Product Catalog
-function renderProducts(categoryFilter = "all") {
+function renderProducts(categoryFilter = "all", searchQuery = "") {
   productsGrid.innerHTML = "";
-  const filtered = categoryFilter === "all" 
-    ? products 
-    : products.filter(p => p.category === categoryFilter);
+  
+  const feedTitle = document.getElementById("feed-title");
+  if (feedTitle) {
+    if (searchQuery) {
+      feedTitle.textContent = `Search results for: "${searchQuery}"`;
+    } else if (categoryFilter === "all") {
+      feedTitle.textContent = "Trending Curations";
+    } else {
+      const cleanTitle = categoryFilter.replace("-", " ").toUpperCase();
+      feedTitle.textContent = `${cleanTitle} SELECTIONS`;
+    }
+  }
+
+  let filtered = products;
+
+  if (categoryFilter !== "all") {
+    filtered = filtered.filter(p => p.categories.includes(categoryFilter));
+  }
+
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    filtered = filtered.filter(p => 
+      p.title.toLowerCase().includes(q) || 
+      p.brand.toLowerCase().includes(q) || 
+      p.description.toLowerCase().includes(q)
+    );
+  }
+
+  if (filtered.length === 0) {
+    productsGrid.innerHTML = `<p style="grid-column: 1/-1; text-align:center; padding: 3rem 1rem; color:var(--text-muted); font-weight:800;">No items found. Try searching or filtering another category.</p>`;
+    return;
+  }
 
   filtered.forEach(p => {
     const card = document.createElement("div");
@@ -152,21 +308,26 @@ function renderProducts(categoryFilter = "all") {
       <div class="product-img-wrapper">
         <img src="${p.imageUrl}" alt="${p.title}" class="product-img" loading="lazy">
         ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ""}
-        <button class="product-wishlist-btn" onclick="quickAddToWishlist('${p.title}', '${p.affiliateUrl}')">
+        <button class="product-wishlist-btn" onclick="event.stopPropagation(); quickAddToWishlist('${p.title}', '${p.affiliateUrl}')">
           <i data-lucide="heart"></i>
         </button>
       </div>
       <div class="product-details">
         <span class="product-brand">${p.brand}</span>
-        <a href="${p.affiliateUrl}" target="_blank" class="product-title">${p.title}</a>
+        <span class="product-title">${p.title}</span>
         <div class="product-price-row">
           <span class="product-price">$${p.price.toFixed(2)}</span>
-          <a href="${p.affiliateUrl}" target="_blank" class="product-link">
-            Buy Gift <i data-lucide="external-link"></i>
-          </a>
+          <span class="product-link">
+            Details <i data-lucide="info"></i>
+          </span>
         </div>
       </div>
     `;
+    
+    card.addEventListener("click", () => {
+      openProductDetails(p);
+    });
+
     productsGrid.appendChild(card);
   });
   
@@ -175,7 +336,63 @@ function renderProducts(categoryFilter = "all") {
   }
 }
 
-// Quick Add product card item to active user wishlist
+// Product Details Popup modal logic
+function openProductDetails(product) {
+  currentProductViewing = product;
+  detailImg.src = product.imageUrl;
+  detailBrand.textContent = product.brand;
+  detailTitle.textContent = product.title;
+  detailDesc.textContent = product.description;
+  detailPrice.textContent = `$${product.price.toFixed(2)}`;
+  detailAffiliateLink.href = product.affiliateUrl;
+
+  const member = familyMembers.find(m => m.id === activeMemberId);
+  const wishlistBtnText = member ? `Add to ${member.name}'s wishlist` : "Add to your wishlist";
+  detailWishlistBtn.innerHTML = `<i data-lucide="heart"></i> ${wishlistBtnText}`;
+  
+  detailModal.style.display = "flex";
+  
+  if (window.lucide) {
+    lucide.createIcons();
+  }
+}
+
+function hideProductDetails() {
+  detailModal.style.display = "none";
+  currentProductViewing = null;
+}
+
+closeDetailModalBtn.addEventListener("click", hideProductDetails);
+detailModal.addEventListener("click", (e) => {
+  if (e.target === detailModal) hideProductDetails();
+});
+
+detailWishlistBtn.addEventListener("click", () => {
+  if (currentProductViewing) {
+    quickAddToWishlist(currentProductViewing.title, currentProductViewing.affiliateUrl);
+    hideProductDetails();
+  }
+});
+
+// Category Selection Clicks Filter
+document.querySelectorAll(".category-select-link").forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelectorAll(".category-select-link").forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+    const category = link.getAttribute("data-category");
+    renderProducts(category, headerSearchInput.value.trim());
+  });
+});
+
+// Search input handling
+headerSearchInput.addEventListener("input", (e) => {
+  const activeLink = document.querySelector(".category-select-link.active");
+  const category = activeLink ? activeLink.getAttribute("data-category") : "all";
+  renderProducts(category, e.target.value.trim());
+});
+
+// Quick Add product item to active family wishlist
 window.quickAddToWishlist = function(title, url) {
   if (!activeMemberId) {
     alert("Please add or select a Family Member first!");
@@ -183,29 +400,23 @@ window.quickAddToWishlist = function(title, url) {
   }
   const member = familyMembers.find(m => m.id === activeMemberId);
   if (member) {
-    // Avoid duplicates
     if (member.wishlist.some(item => item.url === url)) {
       alert("This item is already in their wishlist!");
       return;
     }
     member.wishlist.push({ title, url });
-    storage.set("gifty_family_members", familyMembers);
+    storage.set("gifting_butler_family", familyMembers);
     renderWishlist();
-    alert(`Added "${title}" to ${member.name}'s Wishlist!`);
+    alert(`Added "${title}" to ${member.name}'s wishlist!`);
   }
 };
 
-// Filter Products trigger
-categoryTags.forEach(tag => {
-  tag.addEventListener("click", () => {
-    categoryTags.forEach(t => t.classList.remove("active"));
-    tag.classList.add("active");
-    renderProducts(tag.dataset.category);
-  });
-});
-
-// Giveaway Popup trigger
+// Giveaway Modal Navigation
 function showGiveawayModal() {
+  updateEntryCount();
+  // Reset steps on open: show Ad, hide Form
+  stepAd.classList.add("active");
+  stepForm.classList.remove("active");
   giveawayModal.style.display = "flex";
 }
 
@@ -219,25 +430,42 @@ giveawayModal.addEventListener("click", (e) => {
   if (e.target === giveawayModal) hideGiveawayModal();
 });
 
+btnProceedGiveaway.addEventListener("click", () => {
+  stepAd.classList.remove("active");
+  stepForm.classList.add("active");
+});
+
 giveawayForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const email = document.getElementById("giveaway-email").value;
-  alert(`✨ Success! ${email} has been entered into the giveaway! Watch out for special partner updates from Mishpacha in your inbox.`);
+  const email = document.getElementById("giveaway-email").value.trim();
+  
+  let entries = getGiveawayEntries();
+  if (entries.includes(email)) {
+    alert("This email is already registered for this week's giveaway!");
+    hideGiveawayModal();
+    return;
+  }
+
+  entries.push(email);
+  setGiveawayEntries(entries);
+  setMyEmail(email);
+  updateEntryCount();
+  
+  alert(`✨ Success! You have been entered into the Gifting Butler Weekly Giveaway!`);
   hideGiveawayModal();
 });
 
-// Show popup automatically on load (after 2 seconds delay)
+// Automatically trigger popup on session load
 window.addEventListener("load", () => {
   setTimeout(() => {
-    // Only display if the user hasn't closed it yet in this session
-    if (!sessionStorage.getItem("gifty_modal_dismissed")) {
+    if (!sessionStorage.getItem("gifting_butler_modal_dismissed")) {
       showGiveawayModal();
-      sessionStorage.setItem("gifty_modal_dismissed", "true");
+      sessionStorage.setItem("gifting_butler_modal_dismissed", "true");
     }
   }, 2000);
 });
 
-// Family Registry Widget Logic
+// Family Registry & Wishlists logic
 function renderFamilyMembers() {
   familyMemberList.innerHTML = "";
   familyMembers.forEach(member => {
@@ -270,7 +498,7 @@ addMemberForm.addEventListener("submit", (e) => {
     familyMembers.push({ id: newId, name, wishlist: [] });
     activeMemberId = newId;
     memberNameInput.value = "";
-    storage.set("gifty_family_members", familyMembers);
+    storage.set("gifting_butler_family", familyMembers);
     renderFamilyMembers();
     renderWishlist();
   }
@@ -282,7 +510,7 @@ window.deleteFamilyMember = function(event, id) {
   if (activeMemberId === id) {
     activeMemberId = familyMembers.length > 0 ? familyMembers[0].id : null;
   }
-  storage.set("gifty_family_members", familyMembers);
+  storage.set("gifting_butler_family", familyMembers);
   renderFamilyMembers();
   renderWishlist();
 };
@@ -325,7 +553,7 @@ window.deleteWishlistItem = function(index) {
   const member = familyMembers.find(m => m.id === activeMemberId);
   if (member) {
     member.wishlist.splice(index, 1);
-    storage.set("gifty_family_members", familyMembers);
+    storage.set("gifting_butler_family", familyMembers);
     renderFamilyMembers();
     renderWishlist();
   }
@@ -333,15 +561,21 @@ window.deleteWishlistItem = function(index) {
 
 addWishlistItemForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const title = wishlistTitleInput.value.trim();
-  const url = wishlistUrlInput.value.trim();
-  const member = familyMembers.find(m => m.id === activeMemberId);
+  let title = wishlistTitleInput.value.trim();
+  let url = wishlistUrlInput.value.trim();
   
+  if (url.includes("amazon.com")) {
+    const urlObj = new URL(url);
+    urlObj.searchParams.set("tag", "giftingbutler-20");
+    url = urlObj.toString();
+  }
+
+  const member = familyMembers.find(m => m.id === activeMemberId);
   if (member && title && url) {
     member.wishlist.push({ title, url });
     wishlistTitleInput.value = "";
     wishlistUrlInput.value = "";
-    storage.set("gifty_family_members", familyMembers);
+    storage.set("gifting_butler_family", familyMembers);
     renderFamilyMembers();
     renderWishlist();
   }
@@ -350,15 +584,15 @@ addWishlistItemForm.addEventListener("submit", (e) => {
 shareWishlistBtn.addEventListener("click", () => {
   const member = familyMembers.find(m => m.id === activeMemberId);
   if (member) {
-    const shareText = `Check out ${member.name}'s gift wishlist on Gifty:\n` + 
+    const shareText = `Check out ${member.name}'s wishlist on Gifting Butler:\n` + 
       member.wishlist.map(item => `- ${item.title}: ${item.url}`).join("\n");
     navigator.clipboard.writeText(shareText).then(() => {
-      alert("Wishlist copied to clipboard! Share it with friends and family.");
+      alert("Wishlist copied to clipboard!");
     });
   }
 });
 
-// Gifting Event Reminders Logic
+// Yearly Event Reminders Logic
 function renderReminders() {
   reminderList.innerHTML = "";
   if (reminders.length === 0) {
@@ -369,17 +603,19 @@ function renderReminders() {
   reminders.forEach(rem => {
     const item = document.createElement("div");
     item.className = "reminder-item";
-    const dateFormatted = new Date(rem.date).toLocaleDateString('en-US', {
+    
+    const dateObj = new Date(rem.date);
+    const dateFormatted = dateObj.toLocaleDateString('en-US', {
       month: 'short',
-      day: 'numeric',
-      year: 'numeric'
+      day: 'numeric'
     });
+    
     const cleanOption = rem.timeOption.replace("_", " ");
     
     item.innerHTML = `
       <div class="reminder-details">
         <h4>${rem.event}</h4>
-        <p><i data-lucide="calendar" style="width:12px; height:12px; vertical-align:middle;"></i> ${dateFormatted} | Alert: ${cleanOption} before</p>
+        <p><i data-lucide="refresh-cw" style="width:12px; height:12px; vertical-align:middle;"></i> Yearly on ${dateFormatted} | Alert: ${cleanOption} before</p>
       </div>
       <button class="reminder-delete" onclick="deleteReminder(${rem.id})">
         <i data-lucide="trash-2" style="width:16px; height:16px;"></i>
@@ -401,7 +637,7 @@ reminderForm.addEventListener("submit", (e) => {
     reminders.push({ id: newId, event: eventName, date: eventDate, timeOption });
     document.getElementById("reminder-event").value = "";
     document.getElementById("reminder-date").value = "";
-    storage.set("gifty_reminders", reminders);
+    storage.set("gifting_butler_reminders", reminders);
     renderReminders();
     alert(`Reminder for "${eventName}" saved successfully!`);
   }
@@ -409,72 +645,13 @@ reminderForm.addEventListener("submit", (e) => {
 
 window.deleteReminder = function(id) {
   reminders = reminders.filter(r => r.id !== id);
-  storage.set("gifty_reminders", reminders);
+  storage.set("gifting_butler_reminders", reminders);
   renderReminders();
 };
-
-// AI Chatbot Box Logic
-function toggleChatbot() {
-  const isVisible = chatbotWindow.style.display === "flex";
-  chatbotWindow.style.display = isVisible ? "none" : "flex";
-}
-
-chatbotTriggerBtn.addEventListener("click", toggleChatbot);
-chatbotCloseBtn.addEventListener("click", () => chatbotWindow.style.display = "none");
-heroChatBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  chatbotWindow.style.display = "flex";
-  chatbotInput.focus();
-});
-
-chatbotInputForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const text = chatbotInput.value.trim();
-  if (!text) return;
-
-  // Render user bubble
-  appendChatBubble(text, "user");
-  chatbotInput.value = "";
-
-  // Mock bot reply logic with delay
-  setTimeout(() => {
-    const botReply = generateBotResponse(text);
-    appendChatBubble(botReply, "bot");
-  }, 600);
-});
-
-function appendChatBubble(text, sender) {
-  const bubble = document.createElement("div");
-  bubble.className = `chat-bubble chat-bubble-${sender}`;
-  bubble.textContent = text;
-  chatbotMessages.appendChild(bubble);
-  chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-}
-
-function generateBotResponse(userMsg) {
-  const msg = userMsg.toLowerCase();
-  
-  if (msg.includes("hello") || msg.includes("hi") || msg.includes("hey")) {
-    return "Hey! Ready to find the dopest gift? Who's the lucky person and what do they like? (Tech, books, cool mirror, aesthetic room decor?)";
-  }
-  if (msg.includes("ami") || msg.includes("mishpacha") || msg.includes("magazine") || msg.includes("read")) {
-    return "A magazine subscription is a stellar gift option! We support prints from Ami Weekly and Mishpacha. You can find their subscriptions in our 'Reading/Sub' category tab above! Would you like me to highlight them?";
-  }
-  if (msg.includes("sister") || msg.includes("girl") || msg.includes("she")) {
-    return "For her, the TikTok viral Aesthetic Wave Mirror or a Scented Cereal Bowl Candle are absolute hits. They add instant high-vibes to any vanity setup!";
-  }
-  if (msg.includes("brother") || msg.includes("tech") || msg.includes("gamer") || msg.includes("boy")) {
-    return "For gamer/tech enthusiasts, the Retro Typewriter Keyboard is insanely popular. Or check out the Ambient Sunset Projection Lamp for cozy evening study setups!";
-  }
-  if (msg.includes("mom") || msg.includes("mother") || msg.includes("parent")) {
-    return "Moms love cozy vibes! I'd recommend the Scented Cereal Bowl Candle, or if she loves reading, a Mishpacha print subscription is the perfect weekly gift!";
-  }
-  
-  return "Ooh, nice vibe! I'd highly recommend checking out our top curations like the Retro Mechanical Keyboard or the Wave Mirror. Or you can add a custom affiliate link from any store onto a family member's wishlist right on Gifty!";
-}
 
 // Initial Runs
 renderProducts("all");
 renderFamilyMembers();
 renderWishlist();
 renderReminders();
+updateEntryCount();
