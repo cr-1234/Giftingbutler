@@ -409,7 +409,7 @@ reminderForm.addEventListener("submit", (e) => {
 
 window.deleteReminder = function(id) {
   reminders = reminders.filter(r => r.id !== id);
-  storage.set("giftingbutler_reminders", reminders);
+  storage.set("gifty_reminders", reminders);
   renderReminders();
 };
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giftingbutler - Curated Gifting for Gen Z | Uncommon & Affiliate Wishlists</title>
+  <title>Gifty - Curated Gifting for Gen Z | Uncommon & Affiliate Wishlists</title>
   <meta name="description" content="Find the most unique, aesthetic, and uncommon gifts for your friends and family. Track wishlists, set recurring event reminders, get AI advice, and win giveaways!">
   <link rel="stylesheet" href="style.css">
   <!-- Lucide Icons via CDN for modern clean aesthetic -->
@@ -15,7 +15,7 @@
   <header>
     <a href="#" class="logo" id="main-logo">
       <i data-lucide="sparkles"></i>
-      Giftingbutler<span class="serif-italic" style="font-size:1.1rem; margin-left:-0.2rem;">.</span>
+      gifty<span class="serif-italic" style="font-size:1.1rem; margin-left:-0.2rem;">.</span>
     </a>
     <nav>
       <a href="#feed" class="active">Explore Gifts</a>
@@ -29,7 +29,8 @@
 
   <!-- Hero Section -->
   <section class="hero">
-        <h1>Find the <span class="serif-italic">perfect</span> gift<br>for anyone, anytime.</h1>
+    <div class="badge">🔥 Gen Z Approved Gifting</div>
+    <h1>Find the <span class="serif-italic">perfect</span> gift<br>for anyone, anytime.</h1>
     <p>We curate the most aesthetic, uncommon products from your favorite creators and stores. Join our family circle wishlist to share and get exactly what you want.</p>
     <div style="display:flex; justify-content:center; gap:1rem;">
       <a href="#feed" class="btn btn-primary">Start Browsing</a>
@@ -96,7 +97,7 @@
           </div>
 
           <form id="add-wishlist-item-form" style="margin-top:1rem; border-top: 1px solid var(--border-color); padding-top:1rem;">
-            <p style="font-size:0.75rem; color:var(--text-secondary); margin-bottom:0.5rem;">Add item link from any of our sites:</p>
+            <p style="font-size:0.75rem; color:var(--text-secondary); margin-bottom:0.5rem;">Add item link from any site/affiliate:</p>
             <div class="form-group">
               <input type="text" id="wishlist-title-input" class="form-input" placeholder="Item Name (e.g. Vintage Camera)" required style="margin-bottom:0.5rem;">
               <input type="url" id="wishlist-url-input" class="form-input" placeholder="Paste product link (URL)" required>
@@ -158,12 +159,12 @@
       <button class="modal-close" id="close-modal-btn">&times;</button>
       <i data-lucide="award" style="font-size: 3rem; color: var(--accent-purple); margin-bottom: 1rem; width:64px; height:64px;"></i>
       <h2 style="margin-bottom:0.75rem;">Enter the Epic Giveaway!</h2>
-      <p style="color:var(--text-secondary); margin-bottom:1.5rem; font-size:0.95rem;">enter to win an Amzazon gift card</p>
+      <p style="color:var(--text-secondary); margin-bottom:1.5rem; font-size:0.95rem;">Join 50,000+ others and subscribe to get premium curated Gen Z gift drop alerts weekly. Enter your email for a chance to win a $500 Uncommon Goods Gift Card!</p>
 
       <!-- Required Sponsor Advertisement in the popup before entering email -->
       <div class="modal-sponsor-ad">
         <h4>📢 Sponsored by Mishpacha Magazine</h4>
-        <p>Subscribe to Mishpacha for premium weekly reading.!</p>
+        <p>Subscribe to Mishpacha for premium weekly reading. Get a special Gifty reader discount inside your confirmation email!</p>
       </div>
 
       <form id="giveaway-form">
@@ -183,7 +184,7 @@
   <div class="chatbot-window" id="chatbot-window">
     <div class="chatbot-header">
       <div class="chatbot-header-title">
-        <h3>Giftingbutler AI Advisor ✨</h3>
+        <h3>Gifty AI Advisor ✨</h3>
         <p>Ask me for gift ideas!</p>
       </div>
       <button class="chatbot-close" id="chatbot-close-btn">&times;</button>
