@@ -73,10 +73,13 @@
       <button class="mobile-nav-close" id="mobile-nav-close"><i data-lucide="x"></i></button>
     </div>
     <div class="mobile-nav-body">
+      <button class="btn btn-primary" id="mobile-giveaway-btn" style="width:100%; margin-bottom:1rem;">
+        <i data-lucide="gift"></i> Weekly Giveaway
+      </button>
       <div class="mobile-nav-section-title">Simchas</div>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="bris">Bris Gifts</a>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="bar-mitzvah">Bar Mitzvah</a>
       <a href="#feed" class="mobile-nav-link category-select-link" data-category="bat-mitzvah">Bat Mitzvah</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="bar-mitzvah">Bar Mitzvah</a>
+      <a href="#feed" class="mobile-nav-link category-select-link" data-category="bris">Bris Gifts</a>
       <a href="#feed" class="mobile-nav-link category-select-link" data-category="upsherin">Upsherin</a>
       <a href="#feed" class="mobile-nav-link category-select-link" data-category="lchaim-vort">L'chaim/Vort</a>
       <div class="mobile-nav-section-title">Other</div>
@@ -90,18 +93,15 @@
       <div class="mobile-nav-divider"></div>
       <a href="#wishlist-section" class="mobile-nav-link">My Wishlist</a>
       <a href="#reminder-section" class="mobile-nav-link">Reminders</a>
-      <button class="btn btn-primary" id="mobile-giveaway-btn" style="width:100%; margin-top:1rem;">
-        <i data-lucide="gift"></i> Weekly Giveaway
-      </button>
     </div>
   </div>
 
   <!-- Secondary Categories Bar (Subheader Navigation) -->
   <div class="category-nav-bar" id="categoryNav">
     <a href="#feed" class="category-select-link active" data-category="all">All Gifts</a>
-    <a href="#feed" class="category-select-link" data-category="bris">Bris Gifts</a>
-    <a href="#feed" class="category-select-link" data-category="bar-mitzvah">Bar Mitzvah</a>
     <a href="#feed" class="category-select-link" data-category="bat-mitzvah">Bat Mitzvah</a>
+    <a href="#feed" class="category-select-link" data-category="bar-mitzvah">Bar Mitzvah</a>
+    <a href="#feed" class="category-select-link" data-category="bris">Bris Gifts</a>
     <a href="#feed" class="category-select-link" data-category="upsherin">Upsherin</a>
     <a href="#feed" class="category-select-link" data-category="lchaim-vort">L'chaim/Vort</a>
     <a href="#feed" class="category-select-link" data-category="him">For Him</a>
@@ -243,49 +243,27 @@
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
   <!-- Giveaway Modal (Popup) -->
   <div class="modal-overlay" id="giveaway-modal">
-    <div class="modal-content">
-      <button class="modal-close" id="close-modal-btn">&times;</button>
+    <div class="modal-content liquid-glass" id="giveaway-content">
+      <button class="modal-close" id="close-modal-btn" style="color:var(--text-primary);">&times;</button>
       
-      <!-- STEP 1: SPONSOR ADVERTISEMENT (Shows first) -->
-      <div id="giveaway-step-ad" class="giveaway-step active">
-        <i data-lucide="megaphone" style="font-size: 3rem; color: var(--accent-peach); margin-bottom: 1.25rem; width:64px; height:64px;"></i>
-        <h2 style="margin-bottom:0.75rem;">Partner Spotlight</h2>
-        <p style="color:var(--text-secondary); margin-bottom:1.5rem; font-size:0.95rem;">
-          GiftingButler is made possible by our premium sponsors. Support our partners at Mishpacha and Ami Magazine for high-quality weekly reading.
-        </p>
-        <button class="btn btn-primary" id="btn-proceed-giveaway" style="width:100%;">Proceed to Weekly Giveaway</button>
-      </div>
-
-      <!-- STEP 2: WEEKLY GIVEAWAY FORM (Shows after clicking proceed) -->
-      <div id="giveaway-step-form" class="giveaway-step">
+      <!-- WEEKLY GIVEAWAY FORM -->
+      <div id="giveaway-step-form" class="giveaway-step active">
         <i data-lucide="gift" style="font-size: 3rem; color: var(--accent-purple); margin-bottom: 1rem; width:64px; height:64px;"></i>
-        <h2 style="margin-bottom:0.5rem;">Weekly Giveaway</h2>
-        <p style="color:var(--text-secondary); margin-bottom:1rem; font-size:0.9rem;">
-          Enter weekly for a chance to win an Amazon Gift Card. Prize pool scales with entries.
+        <h2 style="margin-bottom:0.5rem; color:var(--text-primary);">Weekly Giveaway</h2>
+        <p style="color:var(--text-primary); margin-bottom:1.5rem; font-size:0.9rem; font-weight:500;">
+          Enter weekly for a chance to win an Amazon Gift Card!
         </p>
-
-        <!-- Prize dynamic tier tracker card -->
-        <div style="background: var(--bg-tertiary); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.25rem; width: 100%;">
-          <div style="display:flex; justify-content:space-between; font-weight:800; font-size:0.9rem; margin-bottom:0.5rem;">
-            <span>Entries: <span id="entryCount" style="color:var(--accent-purple);">0</span></span>
-            <span>Current Prize Pool: <span id="prizeAmount" style="color:var(--accent-mint); font-size:1.1rem;">$5</span></span>
-          </div>
-          
-          <div class="prize-tiers-container">
-            <div class="prize-tier active" id="tier-5">$5 (Base)</div>
-            <div class="prize-tier" id="tier-10">$10 (100)</div>
-            <div class="prize-tier" id="tier-25">$25 (250)</div>
-            <div class="prize-tier" id="tier-50">$50 (1k)</div>
-            <div class="prize-tier" id="tier-75">$75 (5k)</div>
-            <div class="prize-tier" id="tier-100">$100 (10k)</div>
-          </div>
-        </div>
 
         <form id="giveaway-form" style="width: 100%;">
           <div class="form-group">
-            <input type="email" id="giveaway-email" class="form-input" placeholder="Enter your email to enter" required style="text-align:center;">
+            <input type="email" id="giveaway-email" class="form-input" placeholder="Enter your email to enter" required style="text-align:center; background: rgba(255,255,255,0.8);">
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;"><i data-lucide="mail"></i> Join Giveaway</button>
         </form>

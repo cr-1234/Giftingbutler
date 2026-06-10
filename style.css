@@ -322,10 +322,9 @@ nav a:hover, nav a.active {
 
 /* Logo Image styling */
 .logo-img {
-  height: 130px;
+  height: 180px;
   width: auto;
   display: block;
-  mix-blend-mode: multiply;
   margin: -20px 0;
 }
 
@@ -767,6 +766,48 @@ nav a:hover, nav a.active {
   color: var(--text-muted);
   cursor: pointer;
   font-size: 0.9rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--accent-purple);
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s, background 0.3s;
+  z-index: 999;
+  box-shadow: var(--shadow-md);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #733ddb;
+}
+
+/* Liquid Glass Modal */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Modals Overlay (Crystal Glassmorphism styling) */

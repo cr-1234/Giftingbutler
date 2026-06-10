@@ -261,9 +261,7 @@ const detailWishlistBtn = document.getElementById("detail-wishlist-btn");
 const headerSearchInput = document.getElementById("header-search");
 
 // Giveaway Popup Step Transition Elements
-const stepAd = document.getElementById("giveaway-step-ad");
-const stepForm = document.getElementById("giveaway-step-form");
-const btnProceedGiveaway = document.getElementById("btn-proceed-giveaway");
+// (Removed stepAd and stepForm as we simplified the modal)
 
 // Render Product Catalog
 function renderProducts(categoryFilter = "all", searchQuery = "") {
@@ -414,10 +412,6 @@ window.quickAddToWishlist = function(title, url) {
 
 // Giveaway Modal Navigation
 function showGiveawayModal() {
-  updateEntryCount();
-  // Reset steps on open: show Ad, hide Form
-  stepAd.classList.add("active");
-  stepForm.classList.remove("active");
   giveawayModal.style.display = "flex";
 }
 
@@ -429,11 +423,6 @@ triggerGiveawayBtn.addEventListener("click", showGiveawayModal);
 closeModalBtn.addEventListener("click", hideGiveawayModal);
 giveawayModal.addEventListener("click", (e) => {
   if (e.target === giveawayModal) hideGiveawayModal();
-});
-
-btnProceedGiveaway.addEventListener("click", () => {
-  stepAd.classList.remove("active");
-  stepForm.classList.add("active");
 });
 
 giveawayForm.addEventListener("submit", (e) => {
@@ -450,7 +439,6 @@ giveawayForm.addEventListener("submit", (e) => {
   entries.push(email);
   setGiveawayEntries(entries);
   setMyEmail(email);
-  updateEntryCount();
   
   alert(`✨ Success! You have been entered into the Gifting Butler Weekly Giveaway!`);
   hideGiveawayModal();
@@ -692,4 +680,22 @@ renderProducts("all");
 renderFamilyMembers();
 renderWishlist();
 renderReminders();
-updateEntryCount();
+
+// Back to Top functionality
+const backToTopBtn = document.getElementById("backToTop");
+if (backToTopBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
