@@ -12,129 +12,92 @@
 </head>
 <body>
 
-  <!-- Main Header -->
-  <header>
-    <a href="index.html" class="logo" id="main-logo">
-      <img src="logo.png" alt="GiftingButler Logo" class="logo-img">
+  <!-- Left Sidebar (Desktop) -->
+  <aside class="left-sidebar">
+    <a href="#" class="sidebar-logo">
+      <i data-lucide="gift" style="width:28px; height:28px; color:var(--accent-purple);"></i>
     </a>
+    <nav class="sidebar-nav">
+      <button class="sidebar-item active"><i data-lucide="home"></i></button>
+      <button class="sidebar-item"><i data-lucide="layout-grid"></i></button>
+      <button class="sidebar-item" id="sidebar-wishlist-btn"><i data-lucide="heart"></i></button>
+      <button class="sidebar-item" id="sidebar-reminder-btn"><i data-lucide="calendar"></i></button>
+      <button class="sidebar-item" id="sidebar-giveaway-btn"><i data-lucide="award"></i></button>
+    </nav>
+  </aside>
 
-    <!-- Header Search Box -->
-    <div class="header-search-container">
-      <i data-lucide="search" class="header-search-icon" style="width:16px; height:16px;"></i>
-      <input type="text" id="header-search" class="header-search-input" placeholder="Search gifts, events, or wishlists...">
-    </div>
+  <!-- Bottom Bar (Mobile) -->
+  <nav class="mobile-bottom-bar">
+    <button class="bottom-bar-item active"><i data-lucide="home"></i></button>
+    <button class="bottom-bar-item"><i data-lucide="layout-grid"></i></button>
+    <button class="bottom-bar-item" id="mobile-wishlist-btn"><i data-lucide="heart"></i></button>
+    <button class="bottom-bar-item" id="mobile-reminder-btn"><i data-lucide="calendar"></i></button>
+    <button class="bottom-bar-item" id="mobile-giveaway-btn"><i data-lucide="award"></i></button>
+  </nav>
 
-    <nav>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-btn">
-          Explore Gifts <i data-lucide="chevron-down" style="width:14px; height:14px; margin-left:2px;"></i>
-        </button>
-        <div class="nav-dropdown-content">
-          <div class="dropdown-group">
-            <span class="dropdown-group-title">Simchas</span>
-            <a href="#feed" class="category-select-link" data-category="bris">Bris Gifts</a>
-            <a href="#feed" class="category-select-link" data-category="bar-mitzvah">Bar Mitzvah</a>
-            <a href="#feed" class="category-select-link" data-category="bat-mitzvah">Bat Mitzvah</a>
-            <a href="#feed" class="category-select-link" data-category="upsherin">Upsherin</a>
-            <a href="#feed" class="category-select-link" data-category="lchaim-vort">L'chaim/Vort</a>
-          </div>
-          <div class="dropdown-group">
-            <span class="dropdown-group-title">Other</span>
-            <a href="#feed" class="category-select-link" data-category="him">For Him</a>
-            <a href="#feed" class="category-select-link" data-category="her">For Her</a>
-            <a href="#feed" class="category-select-link" data-category="housewarming">Housewarming</a>
-            <a href="#feed" class="category-select-link" data-category="grandchildren">Gifts for Grandchildren</a>
-            <a href="#feed" class="category-select-link" data-category="children-u3">Children (0-3 Years)</a>
-            <a href="#feed" class="category-select-link" data-category="children-4-8">Children (4-8 Years)</a>
-            <a href="#feed" class="category-select-link" data-category="children-9-12">Children (9-12 Years)</a>
-          </div>
-        </div>
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <div class="shop-header-area">
+      <img src="logo.png" alt="GiftingButler" class="shop-main-logo">
+      
+      <div class="shop-search-wrapper">
+        <input type="text" id="header-search" class="shop-search-input" placeholder="What are you shopping for today?">
+        <button class="shop-search-btn"><i data-lucide="arrow-right"></i></button>
       </div>
 
-      <a href="#wishlist-section">My Wishlist</a>
-      <a href="#reminder-section">Reminders</a>
-      
-      <button class="btn btn-primary" id="trigger-giveaway-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
-        <i data-lucide="gift"></i> Weekly Giveaway
-      </button>
-    </nav>
-
-    <!-- Mobile Hamburger -->
-    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
-      <i data-lucide="menu"></i>
-    </button>
-  </header>
-
-  <!-- Mobile Nav Drawer -->
-  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
-  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
-    <div class="mobile-nav-header">
-      <span style="font-weight:800; font-size:1.1rem;">GiftingButler</span>
-      <button class="mobile-nav-close" id="mobile-nav-close"><i data-lucide="x"></i></button>
+      <div class="shop-pill-categories" id="categoryNav">
+        <button class="category-pill active category-select-link" data-category="all">
+          <div class="pill-icon" style="background:#e2e8f0;"><i data-lucide="layout-grid" style="width:14px; color:#475569;"></i></div> All Gifts
+        </button>
+        <button class="category-pill category-select-link" data-category="bat-mitzvah">
+          <div class="pill-icon" style="background:#fce7f3;"><i data-lucide="sparkles" style="width:14px; color:#db2777;"></i></div> Bat Mitzvah
+        </button>
+        <button class="category-pill category-select-link" data-category="bar-mitzvah">
+          <div class="pill-icon" style="background:#e0e7ff;"><i data-lucide="star" style="width:14px; color:#4f46e5;"></i></div> Bar Mitzvah
+        </button>
+        <button class="category-pill category-select-link" data-category="bris">
+          <div class="pill-icon" style="background:#dbeafe;"><i data-lucide="baby" style="width:14px; color:#2563eb;"></i></div> Bris
+        </button>
+        <button class="category-pill category-select-link" data-category="upsherin">
+          <div class="pill-icon" style="background:#ffedd5;"><i data-lucide="scissors" style="width:14px; color:#ea580c;"></i></div> Upsherin
+        </button>
+        <button class="category-pill category-select-link" data-category="lchaim-vort">
+          <div class="pill-icon" style="background:#f3e8ff;"><i data-lucide="glass-water" style="width:14px; color:#9333ea;"></i></div> L'chaim/Vort
+        </button>
+        <button class="category-pill category-select-link" data-category="him">
+          <div class="pill-icon" style="background:#ccfbf1;"><i data-lucide="user" style="width:14px; color:#0d9488;"></i></div> Men
+        </button>
+        <button class="category-pill category-select-link" data-category="her">
+          <div class="pill-icon" style="background:#ffe4e6;"><i data-lucide="user" style="width:14px; color:#e11d48;"></i></div> Women
+        </button>
+        <button class="category-pill category-select-link" data-category="housewarming">
+          <div class="pill-icon" style="background:#dcfce7;"><i data-lucide="home" style="width:14px; color:#16a34a;"></i></div> Home
+        </button>
+        <button class="category-pill category-select-link" data-category="grandchildren">
+          <div class="pill-icon" style="background:#fef08a;"><i data-lucide="smile" style="width:14px; color:#ca8a04;"></i></div> Grandchildren
+        </button>
+      </div>
     </div>
-    <div class="mobile-nav-body">
-      <button class="btn btn-primary" id="mobile-giveaway-btn" style="width:100%; margin-bottom:1rem;">
-        <i data-lucide="gift"></i> Weekly Giveaway
-      </button>
-      <div class="mobile-nav-section-title">Simchas</div>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="bat-mitzvah">Bat Mitzvah</a>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="bar-mitzvah">Bar Mitzvah</a>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="bris">Bris Gifts</a>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="upsherin">Upsherin</a>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="lchaim-vort">L'chaim/Vort</a>
-      <div class="mobile-nav-section-title">Other</div>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="him">For Him</a>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="her">For Her</a>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="housewarming">Housewarming</a>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="grandchildren">Gifts for Grandchildren</a>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="children-u3">Children (0-3 Years)</a>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="children-4-8">Children (4-8 Years)</a>
-      <a href="#feed" class="mobile-nav-link category-select-link" data-category="children-9-12">Children (9-12 Years)</a>
-      <div class="mobile-nav-divider"></div>
-      <a href="#wishlist-section" class="mobile-nav-link">My Wishlist</a>
-      <a href="#reminder-section" class="mobile-nav-link">Reminders</a>
-    </div>
-  </div>
 
-  <!-- Secondary Categories Bar (Subheader Navigation) -->
-  <div class="category-nav-bar" id="categoryNav">
-    <a href="#feed" class="category-select-link active" data-category="all">All Gifts</a>
-    <a href="#feed" class="category-select-link" data-category="bat-mitzvah">Bat Mitzvah</a>
-    <a href="#feed" class="category-select-link" data-category="bar-mitzvah">Bar Mitzvah</a>
-    <a href="#feed" class="category-select-link" data-category="bris">Bris Gifts</a>
-    <a href="#feed" class="category-select-link" data-category="upsherin">Upsherin</a>
-    <a href="#feed" class="category-select-link" data-category="lchaim-vort">L'chaim/Vort</a>
-    <a href="#feed" class="category-select-link" data-category="him">For Him</a>
-    <a href="#feed" class="category-select-link" data-category="her">For Her</a>
-    <a href="#feed" class="category-select-link" data-category="housewarming">Housewarming</a>
-    <a href="#feed" class="category-select-link" data-category="grandchildren">Gifts for Grandchildren</a>
-  </div>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Find the perfect gift for anyone, anytime.</h1>
-    <p>Your premium personal gifting concierge. Plan recurring events and get notified so you never miss an occasion, sync family wishlists.</p>
-  </section>
-
-  <!-- Main Container Grid -->
-  <main class="container main-grid">
-    
-    <!-- Left Column: Gift Feed -->
-    <section id="feed">
-      <div class="feed-header">
-        <h2 style="font-size: 1.6rem;" id="feed-title">Trending Curations</h2>
+    <!-- Feed Content -->
+    <section id="feed" style="max-width: 1400px; margin: 0 auto; padding: 2rem;">
+      <div class="feed-header" style="margin-bottom:1.5rem;">
+        <h2 style="font-size: 1.4rem; font-weight:800;" id="feed-title">Recently viewed</h2>
       </div>
 
       <div class="products-grid" id="products-grid">
         <!-- Products dynamically generated -->
       </div>
     </section>
+  </main>
 
-    <!-- Right Column: Sidebar Widgets -->
-    <aside class="sidebar">
-
+  <!-- Wishlist Modal -->
+  <div class="modal-overlay" id="wishlist-modal">
+    <div class="modal-content" style="max-width: 600px;">
+      <button class="modal-close" id="close-wishlist-modal">&times;</button>
       <!-- Family Wishlist Widget -->
-      <div class="widget" id="wishlist-section">
+      <div class="widget" id="wishlist-section" style="box-shadow:none; padding:0;">
         <h3 class="widget-title"><i data-lucide="users" style="color:var(--accent-purple);"></i> My Wishlist & Family Registry</h3>
         <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">Select a family member to see their wishlist, or share the lists with others.</p>
         
@@ -177,9 +140,15 @@
           </form>
         </div>
       </div>
+    </div>
+  </div>
 
+  <!-- Reminders Modal -->
+  <div class="modal-overlay" id="reminder-modal">
+    <div class="modal-content" style="max-width: 500px;">
+      <button class="modal-close" id="close-reminder-modal">&times;</button>
       <!-- Recurring Gifting Reminders Widget -->
-      <div class="widget" id="reminder-section">
+      <div class="widget" id="reminder-section" style="box-shadow:none; padding:0;">
         <h3 class="widget-title"><i data-lucide="calendar" style="color:var(--accent-peach);"></i> Gifting Reminders</h3>
         <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">Add upcoming gifting events that recur annually. We will calculate alerts based on dates.</p>
 
@@ -208,9 +177,8 @@
           <!-- Reminders dynamically populated -->
         </div>
       </div>
-
-    </aside>
-  </main>
+    </div>
+  </div>
 
   <!-- Footer Section -->
   <footer>

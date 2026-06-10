@@ -305,7 +305,7 @@ function renderProducts(categoryFilter = "all", searchQuery = "") {
     card.innerHTML = `
       <div class="product-img-wrapper">
         <img src="${p.imageUrl}" alt="${p.title}" class="product-img" loading="lazy">
-        ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ""}
+        <span class="product-price-badge">$${p.price.toFixed(2)}</span>
         <button class="product-wishlist-btn" onclick="event.stopPropagation(); quickAddToWishlist('${p.title}', '${p.affiliateUrl}')">
           <i data-lucide="heart"></i>
         </button>
@@ -313,12 +313,9 @@ function renderProducts(categoryFilter = "all", searchQuery = "") {
       <div class="product-details">
         <span class="product-brand">${p.brand}</span>
         <span class="product-title">${p.title}</span>
-        <div class="product-price-row">
-          <span class="product-price">$${p.price.toFixed(2)}</span>
-          <span class="product-link">
-            Details <i data-lucide="info"></i>
-          </span>
-        </div>
+        <span class="product-link">
+          Details <i data-lucide="info" style="width:14px;"></i>
+        </span>
       </div>
     `;
     
@@ -454,42 +451,22 @@ window.addEventListener("load", () => {
   }, 2000);
 });
 
-// Mobile Nav Drawer logic
-const mobileMenuBtn   = document.getElementById("mobile-menu-btn");
-const mobileNavDrawer = document.getElementById("mobile-nav-drawer");
-const mobileNavOverlay= document.getElementById("mobile-nav-overlay");
-const mobileNavClose  = document.getElementById("mobile-nav-close");
-const mobileGiveawayBtn = document.getElementById("mobile-giveaway-btn");
+// Modals logic for Wishlist and Reminders
+const wishlistModal = document.getElementById("wishlist-modal");
+const reminderModal = document.getElementById("reminder-modal");
 
-function openMobileNav() {
-  mobileNavDrawer.classList.add("open");
-  mobileNavOverlay.classList.add("open");
-  document.body.style.overflow = "hidden";
-  if (window.lucide) lucide.createIcons();
-}
+document.getElementById("sidebar-wishlist-btn").addEventListener("click", () => wishlistModal.style.display = "flex");
+document.getElementById("mobile-wishlist-btn").addEventListener("click", () => wishlistModal.style.display = "flex");
+document.getElementById("close-wishlist-modal").addEventListener("click", () => wishlistModal.style.display = "none");
+wishlistModal.addEventListener("click", (e) => { if (e.target === wishlistModal) wishlistModal.style.display = "none"; });
 
-function closeMobileNav() {
-  mobileNavDrawer.classList.remove("open");
-  mobileNavOverlay.classList.remove("open");
-  document.body.style.overflow = "";
-}
+document.getElementById("sidebar-reminder-btn").addEventListener("click", () => reminderModal.style.display = "flex");
+document.getElementById("mobile-reminder-btn").addEventListener("click", () => reminderModal.style.display = "flex");
+document.getElementById("close-reminder-modal").addEventListener("click", () => reminderModal.style.display = "none");
+reminderModal.addEventListener("click", (e) => { if (e.target === reminderModal) reminderModal.style.display = "none"; });
 
-mobileMenuBtn.addEventListener("click", openMobileNav);
-mobileNavClose.addEventListener("click", closeMobileNav);
-mobileNavOverlay.addEventListener("click", closeMobileNav);
-
-// Mobile drawer links close the drawer when tapped
-document.querySelectorAll(".mobile-nav-link").forEach(link => {
-  link.addEventListener("click", () => {
-    closeMobileNav();
-  });
-});
-
-// Mobile giveaway button
-mobileGiveawayBtn.addEventListener("click", () => {
-  closeMobileNav();
-  showGiveawayModal();
-});
+document.getElementById("sidebar-giveaway-btn").addEventListener("click", showGiveawayModal);
+document.getElementById("mobile-giveaway-btn").addEventListener("click", showGiveawayModal);
 
 // Family Registry & Wishlists logic
 function renderFamilyMembers() {
