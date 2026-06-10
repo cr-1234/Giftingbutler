@@ -230,7 +230,6 @@ let currentProductViewing = null;
 // DOM Elements
 const productsGrid = document.getElementById("products-grid");
 const giveawayModal = document.getElementById("giveaway-modal");
-const triggerGiveawayBtn = document.getElementById("trigger-giveaway-btn");
 const closeModalBtn = document.getElementById("close-modal-btn");
 const giveawayForm = document.getElementById("giveaway-form");
 const familyMemberList = document.getElementById("family-member-list");
@@ -416,7 +415,6 @@ function hideGiveawayModal() {
   giveawayModal.style.display = "none";
 }
 
-triggerGiveawayBtn.addEventListener("click", showGiveawayModal);
 closeModalBtn.addEventListener("click", hideGiveawayModal);
 giveawayModal.addEventListener("click", (e) => {
   if (e.target === giveawayModal) hideGiveawayModal();
